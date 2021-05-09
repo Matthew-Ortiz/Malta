@@ -1,0 +1,83 @@
+!DOCTYPE html> 
+<html>
+<div class="gradient-border" id="box">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>	Portfolio </title>
+<link href="Portfolio.css" rel="stylesheet" />
+<link event="onHover" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+<script src="https://kit.fontawesome.com/4d972227f0.js"></script>
+<script>
+var i = 0; // Start Index
+var images = ["pic1.png", "pic2.png"];
+var time = 4000; // in milliseconds, so it'd be 3 seconds.
+
+function changeImg() {
+
+  document.slide.src = images[i];
+
+  if (i < images.length - 1) {
+    i++
+  } else {
+    i = 0; 
+  }
+
+  setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
+</script>
+</head>
+
+<body>
+
+	<header>
+		
+		<nav>
+			<ul>
+				<li><a href="MaltaMag.html">Home</a></li>
+				<li><a href="Portfolio.html">Our Portfolio</a></li>
+				<li><a href="AboutUs.html">About Us</a></li>
+			</ul>
+		</nav>
+	
+</header>
+
+<div class = "slider">
+<h1>Images</h1>
+<img name ="slide" id="slider" width="600px" height="450px">
+</div>
+
+ <!-- <div id="lower">
+          
+        <p>Videos</p>
+        <iframe src="bsflip.mp4"></iframe>
+
+      </div>-->
+
+<footer>
+	<div class="footer">
+
+         <a class="btn" href="mailto:Malta@email.com">
+         	<i class="fas fa-envelope"></i>
+         </a>
+
+         <a class="btn" href="#">
+         	<i class="fab fa-facebook-f"></i>
+         </a>
+
+         <a class="btn" href = "https://www.instagram.com/maltamagazine/?hl=en">
+         	<i class="fab fa-instagram"></i>
+         </a>
+
+         <a class="btn" href="#">
+         	<i class="fab fa-youtube"></i>
+         </a>
+
+      </div>
+</footer>
+</div>
+</body>
+</html>
